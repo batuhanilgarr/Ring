@@ -3,61 +3,150 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Blue Diamond Favorilerim</title>
+    <title>Zeynep’e Layık Olabilecek Yüzükler</title>
+    <!-- Google Analytics: ölçüm kimliğini buraya koy (G-XXXXXXXXXX) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <style>
+      :root {
+        --bg-1: #020617;
+        --bg-2: #0f172a;
+        --bg-3: #1e293b;
+        --accent: #facc15;
+        --accent-soft: rgba(250, 204, 21, 0.12);
+        --accent-soft-strong: rgba(250, 204, 21, 0.24);
+        --text-main: #e5e7eb;
+        --text-muted: #cbd5f5;
+        --card-bg: rgba(15, 23, 42, 0.96);
+        --card-border: rgba(148, 163, 184, 0.45);
+      }
+
       body {
-        background: #9595a0;
-        color: #f8f9fa;
+        min-height: 100vh;
+        margin: 0;
+        background:
+          radial-gradient(circle at top left, rgba(250, 204, 21, 0.12), transparent 55%),
+          radial-gradient(circle at bottom right, rgba(129, 140, 248, 0.16), transparent 55%),
+          linear-gradient(135deg, var(--bg-1), var(--bg-2) 45%, var(--bg-1));
+        color: var(--text-main);
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
+
+      .container {
+        max-width: 1200px;
+      }
+
       h1 {
-        font-weight: 600;
-        letter-spacing: 0.03em;
-        color: #f8f9fa;
+        font-weight: 650;
+        letter-spacing: 0.06em;
+        font-size: clamp(1.8rem, 2.3vw + 1.2rem, 2.4rem);
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #fefce8, #fde68a, #e5e7eb);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 0 28px rgba(15, 23, 42, 0.9);
       }
-      .card-title {
-        color: #f8f9fa;
+
+      .page-subtitle {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        max-width: 620px;
+        margin: 0.5rem auto 0;
       }
+
+      .row.g-4 {
+        margin-top: 0.75rem;
+      }
+
       .card {
-        background: #16161a;
-        border: 1px solid #2a2a2e;
-        border-radius: 16px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 18px;
         overflow: hidden;
+        box-shadow:
+          0 20px 40px rgba(15, 23, 42, 0.7),
+          0 0 0 1px rgba(15, 23, 42, 0.8);
+        transition:
+          transform 0.18s ease-out,
+          box-shadow 0.18s ease-out,
+          border-color 0.18s ease-out,
+          background 0.18s ease-out;
       }
+
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent-soft-strong);
+        background: radial-gradient(circle at top, rgba(250, 250, 250, 0.03), transparent 60%),
+          var(--card-bg);
+        box-shadow:
+          0 26px 55px rgba(15, 23, 42, 0.9),
+          0 0 0 1px rgba(15, 23, 42, 0.9);
+      }
+
       .card-img-top {
         width: 100%;
         aspect-ratio: 1 / 1; /* 1100x1100 kare görsellere uygun */
         object-fit: cover;
-        background: #000;
+        background: radial-gradient(circle at center, #020617, #000);
       }
+
+      .card-body {
+        padding: 1rem 1.1rem 1.2rem;
+      }
+
+      .card-title {
+        color: var(--text-main);
+      }
+
       a.product-link {
         display: inline-block;
         margin-top: 0.35rem;
-        color: #ffc107;
+        color: var(--accent);
         text-decoration: none;
-        font-size: 0.85rem;
+        font-size: 0.82rem;
         word-break: break-all;
+        opacity: 0.95;
+        transition: color 0.15s ease-out, opacity 0.15s ease-out;
       }
+
       a.product-link:hover {
         text-decoration: underline;
-        color: #ffe08a;
+        color: #fef08a;
+        opacity: 1;
       }
+
       .badge-karat {
-        background: rgba(255, 193, 7, 0.12);
-        color: #ffc107;
+        background: var(--accent-soft);
+        color: var(--accent);
         border-radius: 999px;
         padding: 0.2rem 0.6rem;
         font-size: 0.7rem;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
       }
     </style>
   </head>
   <body>
     <div class="container py-4">
-      <h1 class="mb-4 text-center">Zeynep’e Layık Olabilecek Yüzükler</h1>
+      <h1 class="mb-2 text-center">Zeynep’e Layık Olabilecek Yüzükler</h1>
+      <p class="text-center mb-4" style="color: #f8f9fa; font-size: 0.9rem;">
+        Filtrelerim: Sarı yüzük halkası, oval kesim, tektaş olmasın; ben de aynı fikirdeyim, vintage tarzı olsun.
+      </p>
       <div class="row g-4">
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="card h-100">
@@ -113,32 +202,7 @@
           </div>
         </div>
 
-        <div class="col-12 col-sm-6 col-lg-4">
-          <div class="card h-100">
-            <img
-              src="https://www.bluediamond.com.tr/resim/urun_yeni/pirlanta-yuzukler/pirlanta-tasarim-yuzukler/bluediamond-pirlanta-tasarim-yuzukler-9500398487-1765969605-2.jpg"
-              class="card-img-top"
-              alt="0,30 Karat Vintage Oval Pırlanta Tektaş Yüzük"
-              loading="lazy"
-            />
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center mb-1">
-                <h5 class="card-title fs-6 mb-0">
-                  0,30 Karat Vintage Oval Tektaş
-                </h5>
-                <span class="badge-karat">0,30 ct</span>
-              </div>
-              <a
-                class="product-link"
-                href="https://www.bluediamond.com.tr/pirlantali-tasarim-yuzuk-9500397668.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                https://www.bluediamond.com.tr/pirlantali-tasarim-yuzuk-9500397668.html
-              </a>
-            </div>
-          </div>
-        </div>
+        
 
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="card h-100">
@@ -189,6 +253,354 @@
                 rel="noopener noreferrer"
               >
                 https://www.bluediamond.com.tr/pirlantali-tasarim-yuzuk-9500397671.html
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100">
+            <img
+              src="https://www.arispirlanta.com/image/cachewebp/data/1000x1000/urunler/l-oval-cekim/aris-pirlanta-yuzukler-rdf09423-0011-1000x1000.webp"
+              class="card-img-top"
+              alt="L'oval 0.41 Karat Oval Kesim Pırlanta Yüzük - Ariş"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="card-title fs-6 mb-0">
+                  L'oval 0,41 ct Oval Tektaş (Ariş)
+                </h5>
+                <span class="badge-karat">0,41 ct</span>
+              </div>
+              <a
+                class="product-link"
+                href="https://www.arispirlanta.com/l-oval-0-41-karat-oval-kesim-pirlanta-yuzuk.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.arispirlanta.com/l-oval-0-41-karat-oval-kesim-pirlanta-yuzuk.html
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100">
+            <img
+              src="https://img-zenpirlanta.mncdn.com/mnresize/750/750/resim/urun/pirlanta-yuzukler/tektas-pirlanta-yuzukler/zen-pirlanta-tektas-pirlanta-yuzukler-3000536448-RG096888-314-1630664826-4.jpg"
+              class="card-img-top"
+              alt="0,29 ct Tektaş Pırlanta Yüzük - Zen"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="card-title fs-6 mb-0">
+                  0,29 ct Tektaş (Zen)
+                </h5>
+                <div class="d-flex flex-column align-items-end">
+                  <span class="badge-karat mb-1">0,29 ct</span>
+                  <span class="badge bg-warning text-dark" style="font-size: 0.7rem;">
+                    Begenmez gibi
+                  </span>
+                </div>
+              </div>
+              <a
+                class="product-link"
+                href="https://www.zenpirlanta.com/urun/tektas-altin-pirlanta-yuzuk-3000536448"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.zenpirlanta.com/urun/tektas-altin-pirlanta-yuzuk-3000536448
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beğenmez gibi: Blue Diamond alternatifleri -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100">
+            <img
+              src="https://www.bluediamond.com.tr/resim/urun_yeni/pirlanta-yuzukler/pirlanta-tasarim-yuzukler/bluediamond-pirlanta-tasarim-yuzukler-9500398406-1770034323-2.jpg"
+              class="card-img-top"
+              alt="0,30 Karat Pırlanta Tasarım Yüzük"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="card-title fs-6 mb-0">
+                  0,30 ct Tasarım (Blue Diamond)
+                </h5>
+                <div class="d-flex flex-column align-items-end">
+                  <span class="badge-karat mb-1">0,30 ct</span>
+                  <span class="badge bg-warning text-dark" style="font-size: 0.7rem;">
+                    Begenmez gibi
+                  </span>
+                </div>
+              </div>
+              <a
+                class="product-link"
+                href="https://www.bluediamond.com.tr/pirlantali-tasarim-yuzuk-9500398406.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.bluediamond.com.tr/pirlantali-tasarim-yuzuk-9500398406.html
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100">
+            <img
+              src="https://www.bluediamond.com.tr/resim/urun_yeni/pirlanta-yuzukler/pirlanta-tektas-yuzukler/bluediamond-pirlanta-tasarim-yuzukler-9500352885-1750417364-1.jpeg"
+              class="card-img-top"
+              alt="0,38 Karat Vintage Lotus Oval Pırlanta Tektaş Yüzük"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="card-title fs-6 mb-0">
+                  0,38 ct Vintage Lotus Oval
+                </h5>
+                <div class="d-flex flex-column align-items-end">
+                  <span class="badge-karat mb-1">0,38 ct</span>
+                  <span class="badge bg-warning text-dark" style="font-size: 0.7rem;">
+                    Begenmez gibi
+                  </span>
+                </div>
+              </div>
+              <a
+                class="product-link"
+                href="https://www.bluediamond.com.tr/pirlantali-tasarim-yuzuk-9500352885.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.bluediamond.com.tr/pirlantali-tasarim-yuzuk-9500352885.html
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100">
+            <img
+              src="https://www.bluediamond.com.tr/resim/urun_yeni/pirlanta-yuzukler/pirlanta-tektas-yuzukler/bluediamond-pirlanta-tektas-yuzukler-9500306900-1735194243-1.png"
+              class="card-img-top"
+              alt="0,40 Karat Özel Tasarım Prenses Kare Pırlanta Tektaş Yüzük"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="card-title fs-6 mb-0">
+                  0,40 ct Prenses Kare Tektaş
+                </h5>
+                <div class="d-flex flex-column align-items-end">
+                  <span class="badge-karat mb-1">0,40 ct</span>
+                  <span class="badge bg-warning text-dark" style="font-size: 0.7rem;">
+                    Begenmez gibi
+                  </span>
+                </div>
+              </div>
+              <a
+                class="product-link"
+                href="https://www.bluediamond.com.tr/prenses-kare-pirlanta-tektas-yuzuk-9500306900.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.bluediamond.com.tr/prenses-kare-pirlanta-tektas-yuzuk-9500306900.html
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100">
+            <img
+              src="https://www.bluediamond.com.tr/resim/urun_yeni/pirlanta-yuzukler/pirlanta-tasarim-yuzukler/bluediamond-pirlanta-tasarim-yuzukler-9500306898-1733808464-2.jpg"
+              class="card-img-top"
+              alt="0,31 Karat Queen Pırlanta Yüzük"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="card-title fs-6 mb-0">
+                  0,31 ct Queen (Blue Diamond)
+                </h5>
+                <div class="d-flex flex-column align-items-end">
+                  <span class="badge-karat mb-1">0,31 ct</span>
+                  <span class="badge bg-warning text-dark" style="font-size: 0.7rem;">
+                    Begenmez gibi
+                  </span>
+                </div>
+              </div>
+              <a
+                class="product-link"
+                href="https://www.bluediamond.com.tr/pirlanta-tasarim-yuzuk-9500306898.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.bluediamond.com.tr/pirlanta-tasarim-yuzuk-9500306898.html
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100">
+            <img
+              src="https://www.bluediamond.com.tr/resim/urun_yeni/pirlanta-yuzukler/pirlanta-tasarim-yuzukler/bluediamond-pirlanta-tasarim-yuzukler-9500363403-1761830635-2.jpg"
+              class="card-img-top"
+              alt="0,37 Karat Queen Pırlanta Yüzük"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="card-title fs-6 mb-0">
+                  0,37 ct Queen (Blue Diamond)
+                </h5>
+                <div class="d-flex flex-column align-items-end">
+                  <span class="badge-karat mb-1">0,37 ct</span>
+                  <span class="badge bg-warning text-dark" style="font-size: 0.7rem;">
+                    Begenmez gibi
+                  </span>
+                </div>
+              </div>
+              <a
+                class="product-link"
+                href="https://www.bluediamond.com.tr/tasarim-pirlanta-yuzuk-9500363403.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.bluediamond.com.tr/tasarim-pirlanta-yuzuk-9500363403.html
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100">
+            <img
+              src="https://www.bluediamond.com.tr/resim/urun_yeni/pirlanta-yuzukler/pirlanta-tasarim-yuzukler/bluediamond-pirlanta-tasarim-yuzukler-9500398486-1765969497-2.jpg"
+              class="card-img-top"
+              alt="0,30 Karat Vintage Oval Pırlanta Tektaş Yüzük"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="card-title fs-6 mb-0">
+                  0,30 ct Vintage Oval
+                </h5>
+                <div class="d-flex flex-column align-items-end">
+                  <span class="badge-karat mb-1">0,30 ct</span>
+                  <span class="badge bg-warning text-dark" style="font-size: 0.7rem;">
+                    Begenmez gibi
+                  </span>
+                </div>
+              </div>
+              <a
+                class="product-link"
+                href="https://www.bluediamond.com.tr/pirlantali-tasarim-yuzuk-9500397670.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.bluediamond.com.tr/pirlantali-tasarim-yuzuk-9500397670.html
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100">
+            <img
+              src="https://www.bluediamond.com.tr/resim/urun_yeni/pirlanta-yuzukler/pirlanta-tektas-yuzukler/bluediamond-pirlanta-tektas-yuzukler-9500352886-RGB01544-30-314-1759920534-1.jpg"
+              class="card-img-top"
+              alt="0,51 Karat Vintage Lotus Oval Pırlanta Tektaş Yüzük"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="card-title fs-6 mb-0">
+                  0,51 ct Vintage Lotus Oval
+                </h5>
+                <div class="d-flex flex-column align-items-end">
+                  <span class="badge-karat mb-1">0,51 ct</span>
+                  <span class="badge bg-warning text-dark" style="font-size: 0.7rem;">
+                    Begenmez gibi
+                  </span>
+                </div>
+              </div>
+              <a
+                class="product-link"
+                href="https://www.bluediamond.com.tr/pirlantali-tasarim-yuzuk-9500352886.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.bluediamond.com.tr/pirlantali-tasarim-yuzuk-9500352886.html
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100">
+            <img
+              src="https://www.bluediamond.com.tr/resim/urun_yeni/pirlanta-yuzukler/pirlanta-tasarim-yuzukler/bluediamond-pirlanta-tasarim-yuzukler-9500393848-1763119832-2.jpg"
+              class="card-img-top"
+              alt="0,37 Karat Vintage Oval Pırlanta Tektaş Yüzük"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="card-title fs-6 mb-0">
+                  0,37 ct Vintage Oval (Blue Diamond)
+                </h5>
+                <div class="d-flex flex-column align-items-end">
+                  <span class="badge-karat mb-1">0,37 ct</span>
+                  <span class="badge bg-warning text-dark" style="font-size: 0.7rem;">
+                    Begenmez gibi
+                  </span>
+                </div>
+              </div>
+              <a
+                class="product-link"
+                href="https://www.bluediamond.com.tr/pirlantali-tasarim-yuzuk-9500393848.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.bluediamond.com.tr/pirlantali-tasarim-yuzuk-9500393848.html
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100">
+            <img
+              src="https://www.bluediamond.com.tr/resim/urun_yeni/pirlanta-yuzukler/pirlanta-tasarim-yuzukler/bluediamond-pirlanta-tasarim-yuzukler-9500373744-1758019420-2.jpg"
+              class="card-img-top"
+              alt="0,42 Karat Vintage Oval Pırlanta Tektaş Yüzük"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <h5 class="card-title fs-6 mb-0">
+                  0,42 ct Vintage Oval (Blue Diamond)
+                </h5>
+                <div class="d-flex flex-column align-items-end">
+                  <span class="badge-karat mb-1">0,42 ct</span>
+                  <span class="badge bg-warning text-dark" style="font-size: 0.7rem;">
+                    Begenmez gibi
+                  </span>
+                </div>
+              </div>
+              <a
+                class="product-link"
+                href="https://www.bluediamond.com.tr/pirlantali-tasarim-yuzuk-9500373744.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.bluediamond.com.tr/pirlantali-tasarim-yuzuk-9500373744.html
               </a>
             </div>
           </div>
